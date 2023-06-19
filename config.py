@@ -30,11 +30,14 @@ from consts import *
 from bar1 import *
 from workspaces import *
 from keys import *
+from colors import *
+
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], 
+    layout.Columns(border_focus=colors[yellow],
+                   border_normal=colors[bg],
                    border_width=2,
-                   margin=8),
+                   margin=10),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
