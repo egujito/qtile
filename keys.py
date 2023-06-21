@@ -36,6 +36,7 @@ keys = [
         desc="Toggle between split and unsplit sides of stack",
     ),
     
+    Key([mod, "shift"], "s", lazy.spawn("xfce4-screenshooter"), desc="Launch screenshooter"),  
     Key([mod], "t", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "w", lazy.spawn(browser), desc="Launch browser"),
     # Toggle between different layouts as defined below

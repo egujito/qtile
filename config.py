@@ -27,16 +27,17 @@
 from libqtile import layout, widget
 
 from consts import *
+
 from bar1 import *
 from workspaces import *
 from keys import *
-from colors import *
 
+from gruvbox import *
 
 layouts = [
     layout.Columns(border_focus=colors[yellow],
                    border_normal=colors[bg],
-                   border_width=2,
+                   border_width=4,
                    margin=10),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
@@ -62,7 +63,9 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
-    ]
+    ],
+    border_focus=colors[yellow],
+    border_normal=colors[bg],
 )
 
 auto_fullscreen = True

@@ -1,4 +1,4 @@
-colors = ["#282828", # background
+colors  = ["#282828", # background
           "#b85651", # red
           "#bd6f3e", # orange
           "#c18f41", # yellow
@@ -6,7 +6,6 @@ colors = ["#282828", # background
           "#72966c", # aqua
           "#68948a", # blue
           "#ab6c7d"] # purple
-
 bg = 0
 red = 1
 orange = 2
