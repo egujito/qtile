@@ -35,16 +35,17 @@ from keys import *
 from gruvbox import *
 
 layouts = [
-    layout.Columns(border_focus=colors[yellow],
-                   border_normal=colors[bg],
-                   border_width=4,
-                   margin=10),
+    layout.Columns(
+        border_focus=colors[yellow],
+        border_normal=colors[bg],
+        border_width=4,
+        margin=10
+        ),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.Matrix(),
-    # layout.MonadTall(),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),

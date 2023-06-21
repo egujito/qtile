@@ -1,6 +1,6 @@
 from libqtile import bar, widget 
 from libqtile.config import Screen
-from qtile_extras import widget as extra
+from qtile_extras import widget
 from qtile_extras.widget.decorations import BorderDecoration
 
 from gruvbox import *
@@ -34,7 +34,7 @@ screens = [
                     disable_drag=True,
                     fontsize=20,
                     highlight_method='line',
-                    highlight_color='#1D2021',
+                    highlight_color=colors[bg],
                     active=colors[green],
                     block_highlight_text_color=colors[purple],
                     this_current_screen_border=colors[purple],
@@ -42,14 +42,15 @@ screens = [
 
                 init_sep(),
 
-                extra.CurrentLayoutIcon(
+                widget.CurrentLayoutIcon(
                     scale=0.7,
                     use_mask=True,
-                    foreground=colors[purple],
+                    foreground=colors,
                     ),
 
                 widget.Prompt(
-                    foreground=colors[green],
+                    foreground=colors,
+                    prompt="> ~ "
                     ),
                 
                 init_sep(),
@@ -57,7 +58,7 @@ screens = [
                 widget.WindowName(
                     format="{name}",
                     fontsize=14,
-                    foreground=colors[purple],
+                    foreground=colors,
                     ),
                 #widget.Chord(
                     #chords_colors={
@@ -137,7 +138,6 @@ screens = [
                 #init_sep(),
 
                 
-                #widget.UPowerWidget(),
                 #widget.Battery(
                     #foreground=colors[orange],
                     #battery=0,
@@ -158,7 +158,7 @@ screens = [
                     #),
 
 
-                extra.UPowerWidget(
+                widget.UPowerWidget(
                     border_charge_colour=colors[orange],
                     border_colour=colors[orange],
                     border_critical_colour=colors[red],
@@ -248,7 +248,7 @@ screens = [
             ],
             40,
             opacity = 1,
-            background = "#1D2021"
+            background = colors[bg]
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
