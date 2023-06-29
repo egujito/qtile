@@ -8,7 +8,7 @@ from gruvbox import *
 from consts import *
 
 widget_defaults = dict(
-    font="jetbrains mono nerd font",
+    font="Iosevka Term Heavy Extended",
     fontsize=16,
     padding=3,
 )
